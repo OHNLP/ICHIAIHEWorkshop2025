@@ -27,7 +27,7 @@
       background-color: #f8fafc; /* 轻微灰白底色，可自行修改 */
     }
 
-    /* 导航栏颜色：与参考网站保持统一色系，可选 */
+    /* 导航栏颜色（如要统一，可改为 #002856 !important ） */
     .navbar {
       background-color: #157878 !important;
     }
@@ -39,10 +39,10 @@
       color: #dfeef0 !important; /* 鼠标悬停时微微变亮 */
     }
 
-    /* 头部大标题 */
+    /* 头部大标题（Hero） */
     .custom-header {
-      background-color: #157878;
-      color: #fff;
+      background-color: #002856; /* 新颜色 */
+      color: #ae6042;           /* 新字体颜色 */
       padding: 3rem 1rem;
       text-align: center;
     }
@@ -54,7 +54,7 @@
       font-weight: 400;
       opacity: 0.95;
     }
-    .custom-header .lead {
+    .custom-header p.lead {
       font-size: 1.1rem;
       margin-top: 1rem;
       opacity: 0.9;
@@ -65,7 +65,7 @@
       background-color: #fff;
       border-radius: 6px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      margin-top: -2rem; /* 往上提升一点，让内容“盖住”部分header */
+      margin-top: -2rem; /* 往上提升一点，让内容“覆盖”部分header */
       padding: 2rem;
       position: relative; 
       z-index: 10; /* 确保在header之上 */
@@ -89,7 +89,7 @@
       text-decoration: underline;
     }
 
-    /* 黑色条 */
+    /* 顶部黑色条 */
     .footer-top {
       background-color: #000;
       color: #fff;
@@ -105,6 +105,7 @@
     }
     .footer-bottom a {
       color: #fff;
+      text-decoration: underline;
     }
 
     /* 返回顶部按钮 */
@@ -153,38 +154,32 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarMenu">
       <ul class="navbar-nav ms-auto">
+        <!-- 1) Events 链接更新 -->
         <li class="nav-item">
           <a
             class="nav-link"
-            href="https://www.aim-ahead.net/aim-ahead-events/"
+            href="https://events.dimes.unical.it/ichi2025/authors/call-for-workshop-papers/"
             target="_blank"
             rel="noopener"
           >
             Events
           </a>
         </li>
+        <!-- 2) Join 改为 Register, 链接到 Google Form -->
         <li class="nav-item">
           <a
             class="nav-link"
-            href="https://connect.aim-ahead.net"
+            href="https://forms.gle/Ykqx6zH3L6wuytub6"
             target="_blank"
             rel="noopener"
           >
-            Join
+            Register
           </a>
         </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="https://helpdesk.aim-ahead.net/ticket/create/AIM-AHEAD_General_Info"
-            target="_blank"
-            rel="noopener"
-          >
-            Contact
-          </a>
-        </li>
+        <!-- 3) 删除 Contact -->
       </ul>
     </div>
   </div>
@@ -198,9 +193,8 @@
     <h2>The 1st AIM-AHEAD Workshop for AI for Health Equity (AIHE)</h2>
     <p class="lead">
       Join us to discuss and shape the future of AI for health equity, focusing on reducing  
-      the digital divide in healthcare and research.
-      <br>
-      <em>Hosted by the AIM-AHEAD Consortium</em>
+      the digital divide in healthcare and research.<br>
+      Hosted by the AIM-AHEAD Consortium
     </p>
   </div>
 </header>
@@ -336,11 +330,5 @@
   integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
   crossorigin="anonymous"
 ></script>
-
-<!-- 如果需要Font Awesome图标，请自行引入 -->
-<!-- 
-<script src="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"></script>
--->
-
 </body>
 </html>

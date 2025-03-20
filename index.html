@@ -27,44 +27,41 @@
       padding: 0;
     }
 
-    /* 顶部自定义条：放 AIM-AHEAD、Events、Register，居中 */
-    .top-bar {
-      background-color: #157878;
+    /* 让整个header都采用渐变背景 */
+    header.gradient-header {
+      background: linear-gradient(90deg, #1d66b2 0%, #2fa46d 100%);
+      color: #fff;
+    }
+
+    /* 导航部分：AIM-AHEAD 左上角，Events和Register右侧 */
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* 左右分散对齐 */
       padding: 0.8rem 1rem;
     }
-    .top-bar .menu-container {
-      /* 用 flex + justify-content:center 将菜单居中 */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem; /* 链接之间的水平间距 */
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .top-bar a {
+    .header-nav a {
       color: #fff;
       text-decoration: none;
       font-size: 1.05rem;
       font-weight: 600;
     }
-    .top-bar a:hover {
+    .header-nav a:hover {
       text-decoration: underline;
     }
 
-    /* 渐变标题区 */
-    .gradient-hero {
-      background: linear-gradient(90deg, #1d66b2 0%, #2fa46d 100%);
+    /* 标题区：居中 */
+    .hero-content {
       text-align: center;
-      padding: 4rem 1rem;
-      color: #fff;
+      padding: 3rem 1rem 4rem; 
     }
-    .gradient-hero h1 {
+    .hero-content h1 {
       font-size: 2.4rem; 
       font-weight: 700;
       margin-bottom: 1rem;
-      white-space: normal;  /* 允许在小屏自动换行，避免水平滚动 */
+      white-space: normal;
     }
-    .gradient-hero .subheading {
+    .hero-content .subheading {
       font-size: 1.1rem;
       opacity: 0.95;
       margin: 0;
@@ -116,13 +113,15 @@
       text-decoration: underline;
     }
 
+    /* 小屏幕适配 */
     @media (max-width: 576px) {
-      .top-bar .menu-container {
+      .header-nav {
         flex-direction: column;
+        align-items: flex-start; /* AIM-AHEAD 左对齐 */
         gap: 1rem;
       }
-      .gradient-hero h1 {
-        font-size: 1.8rem; /* 小屏可酌情缩小一点 */
+      .hero-content h1 {
+        font-size: 1.8rem;
       }
       .footer-bottom {
         display: flex;
@@ -139,23 +138,34 @@
 
 <body>
 
-<!-- 顶部自定义条（替代原来的导航栏） -->
-<div class="top-bar">
-  <div class="menu-container">
-    <a href="https://www.aim-ahead.net/" target="_blank" rel="noopener">AIM-AHEAD</a>
-    <a href="https://events.dimes.unical.it/ichi2025/authors/call-for-workshop-papers/" target="_blank" rel="noopener">Events</a>
-    <a href="https://forms.gle/Ykqx6zH3L6wuytub6" target="_blank" rel="noopener">Register</a>
+<!-- 整个Header区（渐变背景） -->
+<header class="gradient-header">
+  <!-- 导航 -->
+  <div class="header-nav">
+    <!-- 左上角：AIM-AHEAD -->
+    <a href="https://www.aim-ahead.net/" target="_blank" rel="noopener">
+      AIM-AHEAD
+    </a>
+    <!-- 右侧：Events, Register -->
+    <div>
+      <a href="https://events.dimes.unical.it/ichi2025/authors/call-for-workshop-papers/" 
+         target="_blank" rel="noopener"
+         class="me-3">
+         Events
+      </a>
+      <a href="https://forms.gle/Ykqx6zH3L6wuytub6"
+         target="_blank" rel="noopener">
+         Register
+      </a>
+    </div>
   </div>
-</div>
 
-<!-- 渐变标题区 -->
-<header class="gradient-hero">
-  <div class="container">
-    <h1>Bridging the Digital Divide:</h1>
-    <h1>The 1st AIM-AHEAD Workshop for AI for Health Equity (AIHE)</h1>
-    <h1>June 18-21, 2025 in Italy</h1>
+  <!-- 大标题内容 -->
+  <div class="hero-content">
+    <h1>Bridging the Digital Divide: The 1st AIM-AHEAD Workshop for AI for Health Equity (AIHE)</h1>
     <p class="subheading">
-      In conjunction with IEEE ICHI 2025
+      In conjunction with the 2025 IEEE International Conference on Healthcare Informatics (IEEE ICHI 2025)<br>
+      18th - 21st June 2025 – Rende (CS) – Italy
     </p>
   </div>
 </header>
@@ -209,7 +219,6 @@
 
 <!-- 页脚 -->
 <footer id="colophon" class="site-footer" role="contentinfo">
-
   <!-- 顶部黑色条，含IEEE标志和隐私政策链接 -->
   <div class="footer-top">
     <div class="container py-3 text-white">

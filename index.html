@@ -27,25 +27,40 @@
       padding: 0;
     }
 
-    /* 让整个header都采用渐变背景 */
+    /* 整个header：蓝到褐红的渐变背景 */
     header.gradient-header {
-      /* 改为 #002856 -> #ae6042 的线性渐变 */
       background: linear-gradient(90deg, #002856 0%, #ae6042 100%);
       color: #fff;
     }
 
-    /* 导航部分：AIM-AHEAD 左上角，Events和Register右侧 */
+    /* 导航区：左侧是LOGO和AIM-AHEAD，右侧是Events & Register */
     .header-nav {
       display: flex;
       align-items: center;
-      justify-content: space-between; /* 左右分散对齐 */
+      justify-content: space-between;
       padding: 0.8rem 1rem;
     }
+
+    /* 左侧容器：LOGO + AIM-AHEAD 文字 */
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem; /* LOGO与文字之间的水平间距 */
+    }
+    .header-left img {
+      height: 40px; /* 可根据需要调整 */
+    }
+    .header-left a {
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* 右侧导航链接 */
     .header-nav a {
       color: #fff;
       text-decoration: none;
-      font-size: 1.05rem;
-      font-weight: 600;
     }
     .header-nav a:hover {
       text-decoration: underline;
@@ -67,7 +82,6 @@
       opacity: 0.95;
       margin: 0;
     }
-    /* 修改处：为IEEE ICHI 2025加上链接 */
     .hero-content .subheading a {
       color: #fff;
       text-decoration: underline;
@@ -110,7 +124,6 @@
     .back-to-top {
       margin-left: 1rem;
     }
-
     .site-footer a {
       color: #fff;
       text-decoration: none;
@@ -123,7 +136,7 @@
     @media (max-width: 576px) {
       .header-nav {
         flex-direction: column;
-        align-items: flex-start; /* AIM-AHEAD 左对齐 */
+        align-items: flex-start;
         gap: 1rem;
       }
       .hero-content h1 {
@@ -144,24 +157,31 @@
 
 <body>
 
-<!-- 整个Header区（渐变背景） -->
+<!-- Header（渐变背景） -->
 <header class="gradient-header">
-  <!-- 导航 -->
   <div class="header-nav">
-    <!-- 左上角：AIM-AHEAD -->
-    <a href="https://www.aim-ahead.net/" target="_blank" rel="noopener">
-      AIM-AHEAD
-    </a>
+    <!-- 左侧：添加 logo + AIM-AHEAD 并并排 -->
+    <div class="header-left">
+      <!-- LOGO 路径：logo-aim-ahead.png；可调节大小或空白间距 -->
+      <img src="logo-aim-ahead.png" alt="AIM-AHEAD Logo">
+      <a href="https://www.aim-ahead.net/" target="_blank" rel="noopener">
+        AIM-AHEAD
+      </a>
+    </div>
     <!-- 右侧：Events, Register -->
     <div>
-      <a href="https://events.dimes.unical.it/ichi2025/authors/call-for-workshop-papers/" 
-         target="_blank" rel="noopener"
-         class="me-3">
-         Events
+      <a
+        href="https://events.dimes.unical.it/ichi2025/authors/call-for-workshop-papers/"
+        target="_blank" rel="noopener"
+        class="me-3"
+      >
+        Events
       </a>
-      <a href="https://forms.gle/Ykqx6zH3L6wuytub6"
-         target="_blank" rel="noopener">
-         Register
+      <a
+        href="https://forms.gle/Ykqx6zH3L6wuytub6"
+        target="_blank" rel="noopener"
+      >
+        Register
       </a>
     </div>
   </div>
@@ -179,7 +199,7 @@
   </div>
 </header>
 
-<!-- 主内容 -->
+<!-- Main content -->
 <main class="container">
   <!-- Important Dates -->
   <section>
@@ -196,7 +216,7 @@
   <section>
     <h3>About the Workshop</h3>
     <p>
-      The <strong>Bridging the Digital Divide:  The 1st AIM-AHEAD Workshop for AI for Advancing Health</strong>
+      The <strong>Bridging the Digital Divide: The 1st AIM-AHEAD Workshop for AI for Advancing Health</strong>
       aims to bring together researchers, practitioners, and community members to:
     </p>
     <ul>
@@ -226,7 +246,7 @@
   </section>
 </main>
 
-<!-- 页脚 -->
+<!-- Footer -->
 <footer id="colophon" class="site-footer" role="contentinfo">
   <!-- 顶部黑色条，含IEEE标志和隐私政策链接 -->
   <div class="footer-top">

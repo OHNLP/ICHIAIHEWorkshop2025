@@ -57,7 +57,7 @@
       height: 40px;
       background-color: #fff; /* 白底 */
       padding: 4px;           /* 内边距 */
-      border-radius: 4px;     /* 圆角，可自行调整 */
+      border-radius: 4px;     /* 圆角 */
     }
 
     /* 右边菜单 */
@@ -72,7 +72,7 @@
       text-decoration: underline;
     }
 
-    /* 大标题区：居中 */
+    /* 标题区：居中 */
     .hero-content {
       text-align: center;
       padding: 3rem 1rem 4rem;
@@ -163,6 +163,15 @@
         margin-top: 0.5rem;
       }
     }
+
+    /* 为图片添加简单边框和圆角，可视化 screenshot */
+    .track-screenshot {
+      max-width: 400px;  /* 自行调整 */
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin: 1rem auto; /* 在父容器中垂直留些空间 */
+      display: block;    /* 居中时有用 */
+    }
   </style>
 </head>
 
@@ -173,17 +182,14 @@
   <div class="header-nav">
     <!-- 左侧：AIM-AHEAD文字 + 带白底Logo -->
     <div class="aim-ahead-left">
-      <!-- 文本 -->
       <a href="https://www.aim-ahead.net/" target="_blank" rel="noopener" class="aim-ahead-text">
         AIM-AHEAD
       </a>
-      <!-- LOGO -->
       <a href="https://www.aim-ahead.net/" target="_blank" rel="noopener">
         <img src="logo-aim-ahead.png" alt="AIM-AHEAD Logo">
       </a>
     </div>
-
-    <!-- 右侧：About, Keynote Speaker, Schedule, Submission, Organization Committee, Registration -->
+    <!-- 右侧导航 -->
     <div class="nav-right">
       <a href="#about">About</a>
       <a href="#keynote">Keynote Speaker</a>
@@ -209,6 +215,7 @@
 
 <!-- Main Content -->
 <main class="container">
+
   <!-- About -->
   <section id="about">
     <h3>About</h3>
@@ -221,39 +228,46 @@
       <li>Showcase latest research on digital divide issues in healthcare</li>
       <li>Foster collaborations between various communities, and stakeholders</li>
     </ul>
-    <p>
-      We welcome submissions (papers, talks, demos) from all disciplines and backgrounds—
-      especially those historically under-resourced—to advance AI in promoting healthy communities.
-    </p>
   </section>
 
   <!-- Keynote Speaker -->
   <section id="keynote">
     <h3>Keynote Speaker</h3>
-    <p><strong>Jamboor K. Vishwanatha, Ph.D.</strong><br>
-       Regents Professor and Vice President,<br>
-       Principal Investigator, Director,<br>
-       University of North Texas Health Science Center.
+    <p><strong>Jamboor K. Vishwanatha, PhD</strong><br>
+       Regents Professor and Vice President<br>
+       Principal Investigator, National Research Mentoring Network<br>
+       Director, Texas Center for Health Disparities<br>
+       Center for Diversity and International Programs<br>
+       University of North Texas Health Science Center
     </p>
   </section>
 
   <!-- Schedule -->
   <section id="schedule">
     <h3>Schedule</h3>
-    <p><strong>Keynote Speech</strong>: Jamboor K. Vishwanatha, PhD<br>
+    <p><strong>Keynote Speech</strong><br>
+       Jamboor K. Vishwanatha, PhD<br>
        8:30 AM - 9:30 AM (1 hour)
     </p>
-    <p><strong>Paper presentations</strong>, 20 minutes each, 9:30 AM - 10:00 AM</p>
-    <p><strong>Coffee break</strong> (10:00 AM - 10:30 AM)</p>
-    <p><strong>Paper presentations</strong>, 20 minutes each, 10:30 AM - 12:00 PM</p>
-    <p><strong>Lunch break</strong> (1 hour), 12:00 PM - 1:00 PM</p>
+    <p><strong>Paper presentations</strong><br>
+       9:30 AM - 10:00 AM
+    </p>
+    <p><strong>Coffee break</strong><br>
+       10:00 AM - 10:30 AM
+    </p>
+    <p><strong>Paper presentations</strong><br>
+       10:30 AM - 12:00 PM
+    </p>
+    <p><strong>Lunch break</strong> (1 hour)<br>
+       12:00 PM - 1:00 PM
+    </p>
   </section>
 
   <!-- Submission -->
   <section id="submission">
     <h3>Submission</h3>
     <p>
-      We are inviting contributions to the HI-Edu 2025, including regular papers, short papers, and abstracts for posters:
+      We are inviting contributions to the <strong>AIHE 2025</strong>, including regular papers, short papers, and abstracts for posters:
     </p>
     <ul>
       <li><strong>Regular papers</strong> (8-10 pages, references not counted): describes mature ideas with substantial implementation/data analysis.</li>
@@ -269,9 +283,24 @@
       <a href="https://www.easychair.org/account2/signin?l=1825191187596168056" target="_blank" rel="noopener">
         EasyChair
       </a>.
-      When choosing a Track, please select <em>“ICHI - AIHE workshop”</em> (refer to the screenshot: <code>track.jpg</code>).
-      <br>
+      When choosing a Track, please select <em>“ICHI - AIHE workshop”</em>.
+    </p>
+    
+    <!-- Screenshot: track.jpg (from GitHub) -->
+    <div class="text-center">
+      <img 
+        src="https://raw.githubusercontent.com/OHNLP/ICHIAIHEWorkshop2025/main/track.jpg"
+        alt="Submission track screenshot"
+        class="img-fluid track-screenshot"
+      >
+    </div>
+
+    <p>
       Submissions must contain author names & affiliations. The review process will be single-blinded.
+    </p>
+    <p>
+      We welcome submissions (papers, talks, demos) from all disciplines and backgrounds—
+      especially those historically under-resourced—to advance AI in promoting healthy communities.
     </p>
   </section>
 

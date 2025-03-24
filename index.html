@@ -33,39 +33,46 @@
       color: #fff;
     }
 
-    /* 导航区：Events & Register在左侧，AIM-AHEAD Logo在右侧 */
+    /* 顶部导航区 */
     .header-nav {
       display: flex;
       align-items: center;
-      justify-content: space-between; /* 左边是菜单，右边是LOGO */
+      justify-content: space-between; /* 左：AIM-AHEAD文字+logo；右：Events, Register */
       padding: 0.8rem 1rem;
     }
 
-    /* 左侧菜单：Events，Register */
-    .nav-left a {
+    /* 左边容器：AIM-AHEAD文字 + 带白底logo */
+    .aim-ahead-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem; /* 文本与logo之间间距 */
+    }
+    .aim-ahead-text {
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+    }
+    .aim-ahead-left img {
+      height: 40px;
+      background-color: #fff; /* 白底 */
+      padding: 4px;           /* 内边距 */
+      border-radius: 4px;     /* 圆角，可自行调整 */
+    }
+
+    /* 右边菜单：Events, Register */
+    .nav-right a {
       color: #fff;
       font-size: 1.05rem;
       font-weight: 600;
       text-decoration: none;
-      margin-right: 2rem; /* 两个链接的间距 */
+      margin-left: 2rem; /* 两个链接的间距 */
     }
-    .nav-left a:hover {
+    .nav-right a:hover {
       text-decoration: underline;
     }
 
-    /* 右侧logo：AIM-AHEAD */
-    .aim-ahead-logo img {
-      height: 40px;              /* 调整LOGO大小 */
-      background-color: #ffffff; /* 让LOGO本身带有白色背景 */
-      padding: 4px;              /* 给LOGO增加一些空白内边距 */
-      border-radius: 4px;        /* 圆角，可根据需求调整 */
-    }
-    .aim-ahead-logo a {
-      display: inline-block;     /* 让链接包含整个LOGO区域 */
-      text-decoration: none;
-    }
-
-    /* 大标题区：居中 */
+    /* 标题区：居中 */
     .hero-content {
       text-align: center;
       padding: 3rem 1rem 4rem;
@@ -138,9 +145,9 @@
         align-items: flex-start;
         gap: 1rem;
       }
-      .nav-left a {
-        margin-right: 1rem;
-        display: inline-block;
+      .nav-right a {
+        margin-left: 0;
+        display: block;
         margin-bottom: 0.5rem;
       }
       .hero-content h1 {
@@ -164,8 +171,20 @@
 <!-- Header（渐变背景） -->
 <header class="gradient-header">
   <div class="header-nav">
-    <!-- 左侧：Events, Register -->
-    <div class="nav-left">
+    <!-- 左侧：AIM-AHEAD文字 + 带白底Logo -->
+    <div class="aim-ahead-left">
+      <!-- 文本 -->
+      <a href="https://www.aim-ahead.net/" target="_blank" rel="noopener" class="aim-ahead-text">
+        AIM-AHEAD
+      </a>
+      <!-- LOGO -->
+      <a href="https://www.aim-ahead.net/" target="_blank" rel="noopener">
+        <img src="logo-aim-ahead.png" alt="AIM-AHEAD Logo">
+      </a>
+    </div>
+
+    <!-- 右侧：Events, Register -->
+    <div class="nav-right">
       <a href="https://events.dimes.unical.it/ichi2025/authors/call-for-workshop-papers/"
          target="_blank" rel="noopener">
         Events
@@ -175,17 +194,11 @@
         Register
       </a>
     </div>
-    <!-- 右侧：AIM-AHEAD LOGO（白底） -->
-    <div class="aim-ahead-logo">
-      <a href="https://www.aim-ahead.net/" target="_blank" rel="noopener">
-        <img src="logo-aim-ahead.png" alt="AIM-AHEAD Logo">
-      </a>
-    </div>
   </div>
 
   <!-- 大标题内容 -->
   <div class="hero-content">
-    <h1>Bridging the Digital Divide:  The 1st AIM-AHEAD Workshop for AI for Advancing Health</h1>
+    <h1>Bridging the Digital Divide: The 1st AIM-AHEAD Workshop for AI for Advancing Health</h1>
     <h1>June 18-21, 2025 in Rende, Italy</h1>
     <p class="subheading">
       In conjunction with 
@@ -196,7 +209,7 @@
   </div>
 </header>
 
-<!-- Main content -->
+<!-- Main Content -->
 <main class="container">
   <!-- Important Dates -->
   <section>
@@ -245,7 +258,6 @@
 
 <!-- Footer -->
 <footer id="colophon" class="site-footer" role="contentinfo">
-  <!-- 顶部黑色条，含IEEE标志和隐私政策链接 -->
   <div class="footer-top">
     <div class="container py-3 text-white">
       <div class="row align-items-center">
@@ -281,7 +293,6 @@
     </div>
   </div>
 
-  <!-- 底部灰色条 -->
   <div class="footer-bottom">
     <div class="container d-flex flex-wrap justify-content-center align-items-center py-2">
       <span class="text-white">

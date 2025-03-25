@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Bridging the Digital Divide: The 1<sup>st</sup> AIM-AHEAD Workshop for AI for Advancing Health</title>
+  <title>Bridging the Digital Divide: The 1<sup><em>st</em></sup> Workshop for AI in Advancing Health</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,30 +37,11 @@
     .header-nav {
       display: flex;
       align-items: center;
-      justify-content: space-between; /* 左：AIM-AHEAD文字+logo；右：菜单 */
+      justify-content: flex-end; /* 右侧：菜单 */
       padding: 0.8rem 1rem;
     }
 
-    /* 左边容器：AIM-AHEAD文字 + 带白底logo */
-    .aim-ahead-left {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem; /* 文本与logo之间间距 */
-    }
-    .aim-ahead-text {
-      font-size: 1.05rem;
-      font-weight: 600;
-      text-decoration: none;
-      color: #fff;
-    }
-    .aim-ahead-left img {
-      height: 40px;
-      background-color: #fff; /* 白底 */
-      padding: 4px;           /* 内边距 */
-      border-radius: 4px;     /* 圆角 */
-    }
-
-    /* 右边菜单 */
+    /* 右侧导航 */
     .nav-right a {
       color: #fff;
       font-size: 1.05rem;
@@ -109,6 +90,15 @@
       margin-bottom: 1rem;
       font-weight: 700;
       color: #157878;
+    }
+
+    /* “track.jpg”图片显示样式 */
+    .track-screenshot {
+      max-width: 400px;  
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin: 1rem auto; 
+      display: block;    
     }
 
     /* 页脚 */
@@ -163,15 +153,6 @@
         margin-top: 0.5rem;
       }
     }
-
-    /* 为图片添加简单边框和圆角，可视化 screenshot */
-    .track-screenshot {
-      max-width: 400px;  /* 自行调整 */
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      margin: 1rem auto; /* 在父容器中垂直留些空间 */
-      display: block;    /* 居中时有用 */
-    }
   </style>
 </head>
 
@@ -180,16 +161,7 @@
 <!-- Header（渐变背景） -->
 <header class="gradient-header">
   <div class="header-nav">
-    <!-- 左侧：AIM-AHEAD文字 + 带白底Logo -->
-    <div class="aim-ahead-left">
-      <a href="https://www.aim-ahead.net/" target="_blank" rel="noopener" class="aim-ahead-text">
-        AIM-AHEAD
-      </a>
-      <a href="https://www.aim-ahead.net/" target="_blank" rel="noopener">
-        <img src="logo-aim-ahead.png" alt="AIM-AHEAD Logo">
-      </a>
-    </div>
-    <!-- 右侧导航 -->
+    <!-- 无左侧LOGO or text, 只保留右侧菜单 -->
     <div class="nav-right">
       <a href="#about">About</a>
       <a href="#keynote">Keynote Speaker</a>
@@ -203,7 +175,7 @@
 
   <!-- 大标题内容 -->
   <div class="hero-content">
-    <h1>Bridging the Digital Divide: The 1<sup>st</sup> AIM-AHEAD Workshop for AI for Advancing Health</h1>
+    <h1>Bridging the Digital Divide: The 1<sup><em>st</em></sup> Workshop for AI in Advancing Health</h1>
     <h1>June 18-21, 2025 in Rende, Italy</h1>
     <p class="subheading">
       In conjunction with 
@@ -220,13 +192,13 @@
   <section id="about">
     <h3>About</h3>
     <p>
-      The <strong>Bridging the Digital Divide: The 1<sup>st</sup> AIM-AHEAD Workshop for AI for Advancing Health</strong>
+      The <strong>Bridging the Digital Divide: The 1<sup><em>st</em></sup> Workshop for AI in Advancing Health</strong>
       aims to bring together researchers, practitioners, and community members to:
     </p>
     <ul>
       <li>Explore challenges and opportunities of using AI/ML to promote healthy communities</li>
       <li>Showcase latest research on digital divide issues in healthcare</li>
-      <li>Foster collaborations between various communities, and stakeholders</li>
+      <li>Foster collaborations between various communities and stakeholders</li>
     </ul>
   </section>
 
@@ -286,7 +258,7 @@
       When choosing a Track, please select <em>“ICHI - AIHE workshop”</em>.
     </p>
     
-    <!-- Screenshot: track.jpg (from GitHub) -->
+    <!-- Screenshot: track.jpg -->
     <div class="text-center">
       <img 
         src="https://raw.githubusercontent.com/OHNLP/ICHIAIHEWorkshop2025/main/track.jpg"
@@ -355,7 +327,6 @@
 
 <!-- Footer -->
 <footer id="colophon" class="site-footer" role="contentinfo">
-
   <div class="footer-top">
     <div class="container py-3 text-white">
       <div class="row align-items-center">
@@ -414,7 +385,6 @@
       </a>
     </div>
   </div>
-
 </footer>
 
 <!-- Bootstrap JS -->

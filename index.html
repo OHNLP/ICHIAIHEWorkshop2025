@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Bridging the Digital Divide: The 1<em>st</em> Workshop for AI in Advancing Health</title>
+  <title>Workshop Canceled - Bridging the Digital Divide</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,48 +33,33 @@
       color: #fff;
     }
 
-    /* 顶部导航区 */
+    /* 顶部导航区（此时仅保留空或简单提示）*/
     .header-nav {
       display: flex;
       align-items: center;
-      justify-content: flex-end; /* 右侧：菜单 */
+      justify-content: center; /* 放中间或可选另种布局 */
       padding: 0.8rem 1rem;
     }
 
-    /* 右侧导航 */
-    .nav-right a {
-      color: #fff;
+    .header-nav p {
+      margin: 0;
       font-size: 1.05rem;
       font-weight: 600;
-      text-decoration: none;
-      margin-left: 2rem; /* 链接间距 */
-    }
-    .nav-right a:hover {
-      text-decoration: underline;
     }
 
     /* 大标题区：居中 */
     .hero-content {
       text-align: center;
-      padding: 3rem 1rem 4rem;
+      padding: 3rem 1rem 3rem;
     }
     .hero-content h1 {
-      font-size: 2.4rem;
+      font-size: 2rem;
       font-weight: 700;
       margin-bottom: 1rem;
       white-space: normal;
     }
-    .hero-content .subheading {
-      font-size: 1.1rem;
-      opacity: 0.95;
-      margin: 0;
-    }
-    .hero-content .subheading a {
-      color: #fff;
-      text-decoration: underline;
-    }
 
-    /* 主体内容 */
+    /* 主内容 */
     main.container {
       background-color: #fff;
       border-radius: 6px;
@@ -83,22 +68,14 @@
       padding: 2rem;
       position: relative;
       z-index: 10;
-      max-width: 1200px;
+      max-width: 800px; /* 适当缩小宽度以便视觉聚焦 */
+      text-align: center;
     }
     main h3 {
-      margin-top: 2rem;
+      margin-top: 1rem;
       margin-bottom: 1rem;
       font-weight: 700;
-      color: #157878;
-    }
-
-    /* “track.jpg”图片显示样式 */
-    .track-screenshot {
-      max-width: 400px;  
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      margin: 1rem auto; 
-      display: block;    
+      color: #d9534f; /* 红色警示 */
     }
 
     /* 页脚 */
@@ -132,25 +109,13 @@
     @media (max-width: 576px) {
       .header-nav {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-      }
-      .nav-right a {
-        margin-left: 0;
-        display: block;
-        margin-bottom: 0.5rem;
       }
       .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
-      .footer-bottom {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .back-to-top {
-        margin-left: 0;
-        margin-top: 0.5rem;
+      main.container {
+        margin-top: -1rem;
+        padding: 1rem;
       }
     }
   </style>
@@ -161,153 +126,28 @@
 <!-- Header（渐变背景） -->
 <header class="gradient-header">
   <div class="header-nav">
-    <div class="nav-right">
-      <a href="#about">About</a>
-      <a href="#keynote">Keynote Speaker</a>
-      <a href="#schedule">Schedule</a>
-      <a href="#submission">Submission</a>
-      <a href="#important-dates">Important Dates</a>
-      <a href="#committee">Organization Committee</a>
-    </div>
+    <!-- 头部只留一句简短提示或空白 -->
+    <p>Workshop Announcement</p>
   </div>
 
-  <!-- 大标题内容 -->
+  <!-- 大标题：Workshop Canceled -->
   <div class="hero-content">
-    <h1>Bridging the Digital Divide: The 1<em>st</em> Workshop for AI in Advancing Health</h1>
-    <h1>June 18-21, 2025 in Rende, Italy</h1>
-    <p class="subheading">
-      In conjunction with 
-      <a href="https://events.dimes.unical.it/ichi2025/" target="_blank" rel="noopener">
-        IEEE ICHI 2025
-      </a>
-    </p>
+    <h1>Bridging the Digital Divide Workshop</h1>
+    <p><em>Formerly scheduled for June 18-21, 2025</em></p>
   </div>
 </header>
 
-<!-- Main Content -->
+<!-- Main Content: Only a cancelation notice -->
 <main class="container">
-
-  <!-- About -->
-  <section id="about">
-    <h3>About</h3>
-    <p>
-      The <strong>Bridging the Digital Divide: The 1<em>st</em> Workshop for AI in Advancing Health</strong>
-      aims to bring together researchers, practitioners, and community members to:
-    </p>
-    <ul>
-      <li>Explore challenges and opportunities of using AI/ML to promote healthy communities</li>
-      <li>Showcase latest research on digital divide issues in healthcare</li>
-      <li>Foster collaborations between various communities and stakeholders</li>
-    </ul>
-  </section>
-
-  <!-- Keynote Speaker -->
-  <section id="keynote">
-    <h3>Keynote Speaker</h3>
-    <p><strong>Jamboor K. Vishwanatha, PhD</strong><br>
-       Regents Professor and Vice President<br>
-       Principal Investigator, National Research Mentoring Network<br>
-       Director, Texas Center for Health Disparities<br>
-       Center for Diversity and International Programs<br>
-       University of North Texas Health Science Center
-    </p>
-  </section>
-
-  <!-- Schedule -->
-  <section id="schedule">
-    <h3>Schedule</h3>
-    <p>Decisions about the exact schedule are being coordinated with the ICHI 2025 general chairs. 
-       At this time, it is too early to publish a firm or tentative schedule. 
-       We will update this page once the workshop date and sessions are finalized.</p>
-  </section>
-
-  <!-- Submission -->
-  <section id="submission">
-    <h3>Submission</h3>
-    <p>
-      We are inviting contributions to the <strong>AIHE 2025</strong>, including regular papers, short papers, and abstracts for posters:
-    </p>
-    <ul>
-      <li><strong>Regular papers</strong> (8-10 pages, references not counted): describes mature ideas with substantial implementation/data analysis.</li>
-      <li><strong>Short papers</strong> (4-6 pages, excluding references): describes innovative ideas with preliminary validation.</li>
-      <li><strong>Abstracts</strong> (1 page, including references): describes work in progress or preliminary results.</li>
-    </ul>
-    <p>
-      Your submissions must adhere to the 
-      <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener">
-        IEEE Proceedings Format
-      </a>.
-      All papers will be submitted via 
-      <a href="https://www.easychair.org/account2/signin?l=1825191187596168056" target="_blank" rel="noopener">
-        EasyChair
-      </a>.
-      When choosing a Track, please select <em>“ICHI - AIHE workshop”</em>.
-    </p>
-
-    <p><strong>Topics</strong> for submission may include <u>any aspect of using AI to advance health</u>. Potential areas of focus include:</p>
-    <ul>
-      <li>AI/ML efforts and applications for promoting healthy communities</li>
-      <li>Methodological and research design innovations to ensure valid and generalizable AI/ML discovery</li>
-      <li>Ethical considerations and the role of AI/ML in addressing the digital divide</li>
-      <li>Approaches for improving data quality and model reliability</li>
-      <li>Reproducibility, transparency, and responsible processes in AI/ML development for health</li>
-    </ul>
-    
-    <div class="text-center">
-      <img 
-        src="https://raw.githubusercontent.com/OHNLP/ICHIAIHEWorkshop2025/main/track.jpg"
-        alt="Submission track screenshot"
-        class="img-fluid track-screenshot"
-      >
-    </div>
-
-    <p>
-      Submissions must contain author names & affiliations. The review process will be single-blinded.
-    </p>
-    <p>
-      We welcome submissions (papers, talks, demos) from all disciplines and backgrounds—
-      especially those historically under-resourced—to advance AI in promoting healthy communities.
-    </p>
-
-    <div class="alert alert-info mt-4">
-      <p><strong>Note</strong>: Workshop papers will be included in the same proceedings volume as the main conference. 
-      Therefore, <strong>camera-ready files of accepted workshop papers</strong> must be uploaded by <em>April 10th</em>, 
-      or they will <strong>not</strong> be included in the proceedings.</p>
-    </div>
-  </section>
-
-  <!-- Important Dates -->
-  <section id="important-dates">
-    <h3>Important Dates</h3>
-    <ul>
-      <li><strong>Deadline for abstract/paper submissions:</strong> <del>March 31, 2025</del> <strong>April 7, 2025</strong></li>
-      <li><strong>Notification of workshop paper acceptance:</strong> <del>April 7, 2025</del> <strong>April 15, 2025</strong></li>
-      <li><strong>Camera ready workshop paper due:</strong> <em><strong>April 10, 2025</strong></em> (strict deadline, or paper will not appear in proceedings)</li>
-      <li><strong>Workshop date:</strong> June 18, 2025</li>
-    </ul>
-  </section>
-
-  <!-- Organization Committee -->
-  <section id="committee">
-    <h3>Organization Committee</h3>
-    <p>
-      <strong>Toufeeq Syed, PhD</strong><br>
-      UTHealth Houston
-    </p>
-    <p>
-      <strong>Xiaoqian Jiang, PhD</strong><br>
-      UTHealth Houston
-    </p>
-    <p>
-      <strong>Hongfang Liu, PhD</strong><br>
-      UTHealth Houston
-    </p>
-    <p>
-      <strong>Sunyang Fu, PhD</strong><br>
-      UTHealth Houston
-    </p>
-  </section>
-
+  <h3>Workshop Canceled</h3>
+  <p>
+    We regret to inform you that the <strong>“Bridging the Digital Divide: The 1<em>st</em> Workshop for AI in Advancing Health”</strong> is canceled.
+    <br><br>
+    For further information or updates, please visit the 
+    <a href="https://events.dimes.unical.it/ichi2025/" target="_blank" rel="noopener">
+      official IEEE ICHI 2025 program
+    </a>.
+  </p>
 </main>
 
 <!-- Footer -->
